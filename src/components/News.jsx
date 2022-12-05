@@ -43,7 +43,7 @@ const News = ({ simplified }) => {
                 <img
                   style={{ maxWidth: "200px", height: "100px" }}
                   src={news?.image?.thumbnail?.contentUrl}
-                  alt="news-image"
+                  alt="news"
                 />
               </div>
               <p>

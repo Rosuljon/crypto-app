@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import HTMLReactParser from "html-react-parser";
 import LineChart from "./LineChart";
 import { useParams } from "react-router-dom";
-import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/cryptoApi';
+import { useGetCryptoDetailsQuery } from '../services/cryptoApi';
 import millify from "millify";
 import { Col, Row, Typography, Select } from "antd";
 import {
@@ -23,7 +23,7 @@ const CryptoDetails = () => {
   const {coinId} = useParams();
   const [timeperiod, setTimeperiod] = useState('7d');
   const {data, isFetching} = useGetCryptoDetailsQuery(coinId);
-  console.log(data);
+  console.log(timeperiod);
   // const { data: coinHistory } = useGetCryptoHistoryQuery({ coinId, timeperiod});
   // console.log(coinHistory);
   const cryptoDetails = data?.data?.coin;
